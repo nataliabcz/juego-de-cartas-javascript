@@ -3,6 +3,7 @@
 <head>
     <title>Juguemos al apuntado!</title>
     <link href="estilos/estilos.css" rel="stylesheet" type="text/css">
+    <script src="codigo/app.js"></script>
 </head>
 
 <body>
@@ -13,25 +14,13 @@
         <button class="boton" onclick="repartir()">
             <img src="imageness/iconos/repartir.png" alt="Repartir las cartas" style="width: 64px;">
         </button>
-        <button class="boton">
+        <button class="boton" onclick="verificar()">
             <img src="imageness/iconos/verificar.png" alt="Hallar grupos de cartas" style="width: 64px;">
         </button>
+
     </div>
-
-    <div id="tablero">
-
-    </div> 
-
-    <script> 
-        function repartir(){
-            let tablero=document.getElementById("tablero");
-            let carta=document.createElement("img");
-            let indice= Math.floor(Math.random()*52) + 1
-            carta.src="imageness/cartas/Carta"+indice+".jpg";
-            tablero.appendChild(carta);
-        }
-
-    </script>
+    
+    <div id="tablero" class="tablero">
 </body>
 
 </html>
